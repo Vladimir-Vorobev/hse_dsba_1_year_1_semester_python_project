@@ -65,7 +65,7 @@
           can show you a detailed information about state jobs in LA from 2013 to 2016.
         </p>
         <div class="my-3">
-          <a class="btn" href="#search">Try it</a>
+          <a class="btn" href="#find-job">Try it</a>
         </div>
       </div>
       <!-- end of container -->

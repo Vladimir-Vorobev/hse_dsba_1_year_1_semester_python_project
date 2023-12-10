@@ -1,5 +1,5 @@
 export const APP_STORE = {
   state: {
-    server_ip: "http://127.0.0.1:5000/"
+    server_ip: "https://python-server-odr2.onrender.com"
   }
 };
