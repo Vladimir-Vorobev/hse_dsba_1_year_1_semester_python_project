@@ -28,4 +28,4 @@ def find_job_description(job):
 
 if __name__ == '__main__':
     df = pd.read_csv('https://drive.google.com/uc?id=1K5E7ONYWNLIEW3sJmfZeBgd6nxSDLzyi')
-    app.run()
+    app.run(port=10000)
