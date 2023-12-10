@@ -37,6 +37,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#find-job">Find job</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/Vladimir-Vorobev/hse_dsba_1_year_1_semester_python_project/tree/main">Github</a>
+            </li>
             <!-- <li class="nav-item">
                         <router-link class="nav-link" to="/qa-search">QA-search</router-link>
                     </li> -->
@@ -130,7 +133,7 @@
                   <option v-for="item in jobs" :key="item">{{ item }}</option>
                 </select>
                 
-                <embed type="application/pdf" :src="job_description_link" />
+                <embed type="application/pdf" :src="job_description_file" style="width: 100%; height: 500px;"/>
             </div>
             <!-- end of div -->
           </div>
@@ -170,7 +173,7 @@ export default {
     return {
       departments: [],
       jobs: [],
-      job_description_file: null
+      job_description_file: ''
     };
   },
   beforeMount(){
@@ -228,26 +231,7 @@ export default {
     },
     find_job_description() {
       let job = document.getElementById("select_job").value
-      fetch(this.$store.state.server_ip + "/find_job_description/" + job, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/pdf"
-        }
-      })
-      .then(response => {
-        return response.json();
-      })
-      .then(body => {
-        console.log(body)
-        this.job_description_file = body.answer.description_file
-      })
-      .catch(error => {
-        Swal.fire({
-          title: "Error",
-          text: error,
-          icon: "error"
-        });
-      });
+      this.job_description_file = this.$store.state.server_ip + "/find_job_description/" + job
     },
     topFunction() {
       document.body.scrollTop = 0; // for Safari

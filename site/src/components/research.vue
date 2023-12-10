@@ -37,6 +37,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="#find-job">Find job</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/Vladimir-Vorobev/hse_dsba_1_year_1_semester_python_project/tree/main">Github</a>
+              </li>
               <!-- <li class="nav-item">
                           <router-link class="nav-link" to="/qa-search">QA-search</router-link>
                       </li> -->
